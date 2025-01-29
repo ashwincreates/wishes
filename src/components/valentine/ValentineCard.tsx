@@ -46,6 +46,13 @@ export default function ValentineCard() {
           transition={{ duration: 0.4 }}
           style={{ transformOrigin: "left" }}
         >
+          {!showConfetti ? <img
+            src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZndhMGF3d2IyNXk1Y2Q2aTAydHJ2eGh5anF2OGZtZG56eGU1Y2p2diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/iAIwyKeZlKBgIpH4TZ/giphy.gif"
+            alt="Valentine" className="w-24 h-24 absolute bottom-0"
+          /> : <img
+            src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbHluYmJqZjl6bjd3a2gxMWRpYWxnM2MxZDBhNGRlbDVkaDNzazJkNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/BXjqytvu9bKzCUHdzz/giphy.gif"
+            alt="Valentine" className="w-24 h-24 absolute bottom-0"
+          />}
           <h1 className="text-rose-500 text-xl font-semibold mb-4">
             Will you be my valentine?
           </h1>
@@ -77,11 +84,12 @@ export default function ValentineCard() {
           )}
         </motion.div>
         <motion.div
-          className="absolute w-full h-full bg-rose-500 rounded-lg shadow-lg flex items-center justify-center text-white text-lg font-bold"
+          className="absolute w-full h-full bg-rose-500 rounded-lg shadow-lg flex items-center justify-center text-white text-lg font-bold px-4"
           animate={{ rotateY: isOpen ? -180 : 0, opacity: isOpen ? 0 : 1 }}
           transition={{ duration: 0.4 }}
           style={{ transformOrigin: "left" }}
         >
+          Dear Senior Manager,<br />
           You have a message
         </motion.div>
       </motion.div>
